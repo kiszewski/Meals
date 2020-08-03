@@ -6,9 +6,14 @@ class MealCategoriesItem extends StatelessWidget {
     return Card(
       elevation: 3,
       child: Padding(
-        padding: EdgeInsets.all(20),
-        child: Text('Italiano')),
-      color: Colors.blue,
+          padding: EdgeInsets.all(20),
+          child: Text(
+            'Italiano',
+            style: TextStyle(
+              fontSize: 20
+            ),
+          )),
+      color: Theme.of(context).primaryColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     );
   }
