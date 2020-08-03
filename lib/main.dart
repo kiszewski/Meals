@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/meal_categories_grid.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,8 +17,9 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Categorias'),
+          centerTitle: true,
         ),
-        body: Container(child: Text('Hello')),
+        body: MealCategoriesGrid()
       ),
     );
   }
