@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'meal_categories_item.dart';
 
 class MealCategoriesGrid extends StatelessWidget {
+  const MealCategoriesGrid();
+  
   @override
   Widget build(BuildContext context) {
     return GridView.count(

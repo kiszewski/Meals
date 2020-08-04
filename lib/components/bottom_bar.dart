@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
+  const BottomBar();
+  
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
