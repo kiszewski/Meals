@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.red[300], accentColor: Colors.teal),
+      theme: ThemeData(primaryColor: Colors.red[300], accentColor: Colors.indigo),
       home: Scaffold(
           drawer: const DrawerWidget(),
           appBar: AppBar(
