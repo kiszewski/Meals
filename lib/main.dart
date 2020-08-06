@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'components/meal-grid/meal_categories_grid.dart';
-import 'components/bottom_bar.dart';
-import 'components/drawer/drawer_widget.dart';
+import 'package:meals/components/screens/favorite-meals/favorite_meals_list.dart';
+import 'components/main-screen/main_screen.dart';
+import 'components/screens/meal-grid/meal_categories_grid.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,14 +17,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.red[300], accentColor: Colors.indigo),
-      home: Scaffold(
-          drawer: const DrawerWidget(),
-          appBar: AppBar(
-            title: const Text('Categorias'),
-            centerTitle: true,
-          ),
-          body: const MealCategoriesGrid(),
-          bottomNavigationBar: const BottomBar()),
+      home: MainScreen(),
     );
   }
 }
+
