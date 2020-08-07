@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/screens/home_page.dart';
+import 'package:meals/screens/meal_details_page.dart';
 import 'package:meals/screens/meals_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => HomePage(),
         '/meals': (context) => MealsPage(),
-        '/meal_details': (context) => Text('ola em detalhe'),
+        '/meal_details': (context) => MealDetailsPage(),
        },
       initialRoute: '/home',
     );

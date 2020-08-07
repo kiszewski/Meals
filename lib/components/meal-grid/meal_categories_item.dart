@@ -37,7 +37,7 @@ class MealCategoriesItem extends StatelessWidget {
               title,
               style: TextStyle(fontSize: 20),
             )),
-        color: color,
+        color: color.withOpacity(0.65),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       onTap: () {
