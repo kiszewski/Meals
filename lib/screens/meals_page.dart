@@ -9,7 +9,8 @@ class MealsPage extends StatelessWidget {
 
   List<Meal> getMealsByCategory(String category) {
     return mealList
-        .where((meal) => meal.categories.any((cat) => cat == category)).toList();
+        .where((meal) => meal.categories.any((cat) => cat == category))
+        .toList();
   }
 
   @override
@@ -22,8 +23,13 @@ class MealsPage extends StatelessWidget {
         title: Text(args.title),
         centerTitle: true,
       ),
-      body: Column(
-        children: mealListFiltered.map((meal) => MealItem(title: meal.title,)).toList(),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:
+              mealListFiltered.map((meal) => MealItem(meal: meal)).toList(),
+        ),
       ),
     );
   }

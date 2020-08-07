@@ -18,11 +18,19 @@ class MealCategoriesItem extends StatelessWidget {
     @required this.color,
   });
 
+  navigateToMeals(BuildContext context, ScreenArguments arguments) {
+    Navigator.pushNamed(
+      context,
+      '/meals',
+      arguments: arguments,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Card(
-        elevation: 3,
+        elevation: 5,
         child: Padding(
             padding: EdgeInsets.all(20),
             child: Text(
@@ -33,11 +41,7 @@ class MealCategoriesItem extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          '/meals',
-          arguments: ScreenArguments(this.title, this.id),
-        );
+        navigateToMeals(context, ScreenArguments(this.title, this.id));
       },
     );
   }
