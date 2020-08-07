@@ -16,7 +16,7 @@ class DrawerWidget extends StatelessWidget {
               height: 150,
               alignment: Alignment.bottomCenter,
               padding: const EdgeInsets.all(20),
-              color: Colors.yellow,
+              color: Theme.of(context).accentColor,
               child: Text(
                 'Vamos cozinhar?',
                 style: TextStyle(

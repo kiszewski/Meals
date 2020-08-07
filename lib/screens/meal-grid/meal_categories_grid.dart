@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:meals/models/category.dart';
 import 'meal_categories_item.dart';
+import '../../data/dummy_data.dart';
 
 class MealCategoriesGrid extends StatelessWidget {
+  static const List<Category> categories = DUMMY_CATEGORIES;
+
   const MealCategoriesGrid();
   
   @override
@@ -11,10 +15,12 @@ class MealCategoriesGrid extends StatelessWidget {
           childAspectRatio: (4/3),
           mainAxisSpacing: 15,
           crossAxisSpacing: 15,          
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           children: <Widget>[
-            MealCategoriesItem(),
-            MealCategoriesItem(),
+            MealCategoriesItem(
+              title: 'Italiano',
+              color: Colors.lightGreenAccent[200],
+            ),
           ],
         );
   }

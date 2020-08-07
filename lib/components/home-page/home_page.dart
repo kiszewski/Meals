@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:meals/components/bottom-bar/bottom_bar.dart';
 import 'package:meals/components/drawer/drawer_widget.dart';
-import 'package:meals/components/screens/favorite-meals/favorite_meals_list.dart';
-import 'package:meals/components/screens/meal-grid/meal_categories_grid.dart';
+import 'package:meals/screens/favorite-meals/favorite_meals_list.dart';
+import 'package:meals/screens/meal-grid/meal_categories_grid.dart';
 
-class MainScreen extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   void _onTapItem(int index) {

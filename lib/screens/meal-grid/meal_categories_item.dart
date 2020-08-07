@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MealCategoriesItem extends StatelessWidget {
+  final String title;
+  final Color color;
+
+  const MealCategoriesItem({
+    @required this.title,
+    @required this.color,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -8,12 +16,10 @@ class MealCategoriesItem extends StatelessWidget {
       child: Padding(
           padding: EdgeInsets.all(20),
           child: Text(
-            'Italiano',
-            style: TextStyle(
-              fontSize: 20
-            ),
+            title,
+            style: TextStyle(fontSize: 20),
           )),
-      color: Theme.of(context).primaryColor,
+      color: color,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     );
   }
