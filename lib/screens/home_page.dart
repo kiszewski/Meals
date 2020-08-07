@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meals/components/bottom-bar/bottom_bar.dart';
 import 'package:meals/components/drawer/drawer_widget.dart';
-import 'package:meals/screens/favorite-meals/favorite_meals_list.dart';
-import 'package:meals/screens/meal-grid/meal_categories_grid.dart';
+import 'package:meals/components/favorite-meals/favorite_meals_list.dart';
+import 'package:meals/components/meal-grid/meal_categories_grid.dart';
 
 class HomePage extends StatefulWidget {
   @override
