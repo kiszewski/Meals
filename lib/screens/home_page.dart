@@ -21,10 +21,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         drawer: const DrawerWidget(),
         appBar: AppBar(
-          title: _selectedIndex == 0 ? Text('Categorias') : Text('Favoritos'),
+          title: _selectedIndex == 0 ? const Text('Categorias') : const Text('Favoritos'),
           centerTitle: true,
         ),
-        body: _selectedIndex == 0 ? MealCategoriesGrid() : FavoriteMealsList(),
+        body: _selectedIndex == 0 ? const MealCategoriesGrid() : const FavoriteMealsList(),
         bottomNavigationBar: BottomBar(
           onTapItem: _onTapItem,
           selectedIndex: _selectedIndex,

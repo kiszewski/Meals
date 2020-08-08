@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/routes/app_routes.dart';
 import 'package:meals/screens/home_page.dart';
 import 'package:meals/screens/meal_details_page.dart';
 import 'package:meals/screens/meals_page.dart';
@@ -13,11 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.red[200], accentColor: Colors.indigo[300]),
       routes: {
-        '/home': (context) => HomePage(),
-        '/meals': (context) => MealsPage(),
-        '/meal_details': (context) => MealDetailsPage(),
+        AppRoutes.HOME: (context) => HomePage(),
+        AppRoutes.MEALS: (context) => MealsPage(),
+        AppRoutes.MEALS_DETAILS: (context) => MealDetailsPage(),
        },
-      initialRoute: '/home',
+      initialRoute: AppRoutes.HOME,
     );
   }
 }

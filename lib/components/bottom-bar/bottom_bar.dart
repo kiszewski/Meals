@@ -18,16 +18,16 @@ class BottomBar extends StatelessWidget {
       onTap: onTapItem,
       items: <BottomNavigationBarItem>[
         const BottomNavigationBarItem(
-            icon: Icon(Icons.category),
-            title: Text(
+            icon: const Icon(Icons.category),
+            title: const Text(
               'Categorias',
-              style: TextStyle(fontSize: 15),
+              style: const TextStyle(fontSize: 15),
             )),
         const BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            title: Text(
+            icon: const Icon(Icons.star),
+            title: const Text(
               'Favoritos',
-              style: TextStyle(fontSize: 15),
+              style: const TextStyle(fontSize: 15),
             )),
       ],
     );

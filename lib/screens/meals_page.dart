@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meals/components/meal-grid/meal_categories_item.dart';
 import 'package:meals/components/meal-item/meal_item.dart';
+import 'package:meals/models/category.dart';
 import 'package:meals/models/meal.dart';
 import '../data/dummy_data.dart';
 
@@ -15,12 +15,12 @@ class MealsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ScreenArguments args = ModalRoute.of(context).settings.arguments;
-    final List<Meal> mealListFiltered = getMealsByCategory(args.id);
+    final Category category = ModalRoute.of(context).settings.arguments;
+    final List<Meal> mealListFiltered = getMealsByCategory(category.id);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(args.title),
+        title: Text(category.title),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

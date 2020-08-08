@@ -18,9 +18,7 @@ class MealCategoriesGrid extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         children: categories.map((category) {
           return MealCategoriesItem(
-            id: category.id,
-            title: category.title,
-            color: category.color,
+            category: category,
           );
         }).toList());
   }

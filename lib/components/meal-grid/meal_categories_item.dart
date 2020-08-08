@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
-
-class ScreenArguments {
-  final String id;
-  final String title;
-
-  ScreenArguments(this.title, this.id);
-}
+import 'package:meals/models/category.dart';
 
 class MealCategoriesItem extends StatelessWidget {
-  final String id;
-  final String title;
-  final Color color;
+final Category category;
 
   const MealCategoriesItem({
-    @required this.id,
-    @required this.title,
-    @required this.color,
+    @required this.category
   });
 
-  navigateToMeals(BuildContext context, ScreenArguments arguments) {
+  _navigateToMeals(BuildContext context, Category category) {
     Navigator.pushNamed(
       context,
       '/meals',
-      arguments: arguments,
+      arguments: category,
     );
   }
 
@@ -32,16 +22,16 @@ class MealCategoriesItem extends StatelessWidget {
       child: Card(
         elevation: 5,
         child: Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Text(
-              title,
-              style: TextStyle(fontSize: 20),
+              category.title,
+              style: const TextStyle(fontSize: 20),
             )),
-        color: color.withOpacity(0.65),
+        color: category.color.withOpacity(0.65),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       onTap: () {
-        navigateToMeals(context, ScreenArguments(this.title, this.id));
+        _navigateToMeals(context, category);
       },
     );
   }

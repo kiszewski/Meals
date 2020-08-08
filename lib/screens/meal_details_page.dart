@@ -22,12 +22,12 @@ class MealDetailsPage extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 15),
+                    margin: const EdgeInsets.only(bottom: 15),
                     child: Text(
                       'Ingredientes',
                       style: TextStyle(
@@ -41,10 +41,10 @@ class MealDetailsPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: meal.ingredients.map((ingr) {
                         return Container(
-                          margin: EdgeInsets.only(bottom: 5),
+                          margin: const EdgeInsets.only(bottom: 5),
                           child: Text(
                             ingr,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                             ),
                           ),
@@ -57,12 +57,12 @@ class MealDetailsPage extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(bottom: 15),
+                    margin: const EdgeInsets.only(bottom: 15),
                     child: Text(
                       'Modo de preparo',
                       style: TextStyle(
@@ -76,7 +76,7 @@ class MealDetailsPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: meal.steps.map((step) {
                         return Container(
-                          margin: EdgeInsets.only(bottom: 5),
+                          margin: const EdgeInsets.only(bottom: 5),
                           child: Text(
                             '${meal.steps.indexOf(step) + 1} - $step',
                             style: TextStyle(
