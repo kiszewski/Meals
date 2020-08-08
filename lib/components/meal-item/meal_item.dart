@@ -4,7 +4,15 @@ import 'package:meals/models/meal.dart';
 class MealItem extends StatelessWidget {
   final Meal meal;
 
-  const MealItem({Key key, this.meal}) : super(key: key);
+  const MealItem({this.meal});
+
+  void _navigateToDetailsMeal(BuildContext context) {
+    Navigator.pushNamed(
+      context,
+      '/meal_details',
+      arguments: meal,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +26,35 @@ class MealItem extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             child: Column(
               children: <Widget>[
-                ClipRRect(
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20)),
-                  child: Image.network(
-                    meal.imageUrl,
-                    height: constrains.maxWidth * 0.5,
-                    width: constrains.maxWidth,
-                    fit: BoxFit.fitWidth,
+                Stack(children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)),
+                    child: Image.network(
+                      meal.imageUrl,
+                      height: constrains.maxWidth * 0.5,
+                      width: constrains.maxWidth,
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
-                ),
+                  Positioned(
+                    bottom: 20,
+                    right: 10,
+                    width: constrains.maxWidth * 0.7,
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      color: Colors.black54,
+                      child: Text(
+                        meal.title,
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w300),
+                      ),
+                    ),
+                  )
+                ]),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
@@ -75,9 +101,7 @@ class MealItem extends StatelessWidget {
             elevation: 5,
           ),
         ),
-        onTap: () {
-          Navigator.pushNamed(context, '/meal_details');
-        },
+        onTap: () => _navigateToDetailsMeal(context),
       );
     });
   }
