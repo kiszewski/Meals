@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/meal.dart';
+import 'package:meals/routes/app_routes.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
@@ -9,7 +10,7 @@ class MealItem extends StatelessWidget {
   void _navigateToDetailsMeal(BuildContext context) {
     Navigator.pushNamed(
       context,
-      '/meal_details',
+      AppRoutes.MEALS_DETAILS,
       arguments: meal,
     );
   }

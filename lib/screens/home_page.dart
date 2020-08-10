@@ -3,6 +3,7 @@ import 'package:meals/components/bottom-bar/bottom_bar.dart';
 import 'package:meals/components/drawer/drawer_widget.dart';
 import 'package:meals/components/favorite-meals/favorite_meals_list.dart';
 import 'package:meals/components/meal-grid/meal_categories_grid.dart';
+import 'package:meals/models/meal.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,6 +12,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+
+  List<Meal> favoriteMeals = [];
 
   void _onTapItem(int index) {
     setState(() => _selectedIndex = index);
@@ -24,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           title: _selectedIndex == 0 ? const Text('Categorias') : const Text('Favoritos'),
           centerTitle: true,
         ),
-        body: _selectedIndex == 0 ? const MealCategoriesGrid() : const FavoriteMealsList(),
+        body: _selectedIndex == 0 ? const MealCategoriesGrid() : FavoriteMealsList(favoriteMeals),
         bottomNavigationBar: BottomBar(
           onTapItem: _onTapItem,
           selectedIndex: _selectedIndex,
