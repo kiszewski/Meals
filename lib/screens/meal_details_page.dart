@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:meals/models/meal.dart';
+import 'package:meals/utils/favoritesModel.dart';
+import 'package:provider/provider.dart';
 
 class MealDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final favorites = Provider.of<FavoritesModel>(context);
     final Meal meal = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
@@ -92,6 +95,12 @@ class MealDetailsPage extends StatelessWidget {
             )
           ],
         ),
+      ),
+      floatingActionButton: IconButton(
+        icon: Icon(Icons.star),
+        onPressed: () {
+          favorites.addFavoriteMeal(meal);
+        },
       ),
     );
   }

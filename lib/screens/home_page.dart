@@ -13,8 +13,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  List<Meal> favoriteMeals = [];
-
   void _onTapItem(int index) {
     setState(() => _selectedIndex = index);
   }
@@ -27,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           title: _selectedIndex == 0 ? const Text('Categorias') : const Text('Favoritos'),
           centerTitle: true,
         ),
-        body: _selectedIndex == 0 ? const MealCategoriesGrid() : FavoriteMealsList(favoriteMeals),
+        body: _selectedIndex == 0 ? const MealCategoriesGrid() : FavoriteMealsList(),
         bottomNavigationBar: BottomBar(
           onTapItem: _onTapItem,
           selectedIndex: _selectedIndex,

@@ -3,21 +3,27 @@ import 'package:meals/routes/app_routes.dart';
 import 'package:meals/screens/home_page.dart';
 import 'package:meals/screens/meal_details_page.dart';
 import 'package:meals/screens/meals_page.dart';
+import 'package:meals/utils/favoritesModel.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => FavoritesModel(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.red[200], accentColor: Colors.indigo[300]),
+      theme: ThemeData(
+          primaryColor: Colors.red[200], accentColor: Colors.indigo[300]),
       routes: {
         AppRoutes.HOME: (context) => HomePage(),
         AppRoutes.MEALS: (context) => MealsPage(),
         AppRoutes.MEALS_DETAILS: (context) => MealDetailsPage(),
-       },
+      },
       initialRoute: AppRoutes.HOME,
     );
   }
