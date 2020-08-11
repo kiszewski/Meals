@@ -96,10 +96,13 @@ class MealDetailsPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: IconButton(
-        icon: Icon(Icons.star),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.star,
+          color: favorites.items.contains(meal) ? Colors.yellow : Colors.white,
+        ),
         onPressed: () {
-          favorites.addFavoriteMeal(meal);
+          favorites.toggleFavoriteMeal(meal);
         },
       ),
     );

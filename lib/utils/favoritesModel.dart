@@ -1,13 +1,18 @@
-import 'dart:collection';
-
 import 'package:flutter/cupertino.dart';
 import 'package:meals/models/meal.dart';
 
 class FavoritesModel extends ChangeNotifier {
   List<Meal> _favoriteMeals = [];
 
-  void addFavoriteMeal(Meal meal) {
-    _favoriteMeals.add(meal);
+  void _addFavoriteMeal(Meal meal) => _favoriteMeals.add(meal);
+
+  void _removeFavoriteMeal(Meal meal) => _favoriteMeals.remove(meal);
+
+  void toggleFavoriteMeal(Meal meal) {
+    _favoriteMeals.contains(meal)
+        ? _removeFavoriteMeal(meal)
+        : _addFavoriteMeal(meal);
+
     notifyListeners();
   }
 
