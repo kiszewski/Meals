@@ -8,14 +8,34 @@ class FavoriteMealsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final favoriteMeals = Provider.of<FavoritesModel>(context);
+
     return SingleChildScrollView(
       child: Column(
-          children: Provider.of<FavoritesModel>(context)
-              .items
-              .map((meal) => MealItem(
-                    meal: meal,
-                  ))
-              .toList()),
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: favoriteMeals.items.isNotEmpty
+              ? favoriteMeals.items
+                  .map((meal) => MealItem(
+                        meal: meal,
+                      ))
+                  .toList()
+              : [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                          margin: EdgeInsets.all(25),
+                          child: Text(
+                            'Nenhuma refeição na sua lista de favoritas',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black54
+                            ),
+                            textAlign: TextAlign.center,
+                          )),
+                    ],
+                  )
+                ]),
     );
   }
 }
