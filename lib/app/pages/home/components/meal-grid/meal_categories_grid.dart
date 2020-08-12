@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:meals/models/category.dart';
+import 'package:meals/app/models/category_model.dart';
+import 'package:meals/data/dummy_data.dart';
 import 'meal_categories_item.dart';
-import '../../data/dummy_data.dart';
 
 class MealCategoriesGrid extends StatelessWidget {
   static const List<Category> categories = DUMMY_CATEGORIES;

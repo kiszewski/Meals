@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meals/components/bottom-bar/bottom_bar.dart';
-import 'package:meals/components/drawer/drawer_widget.dart';
-import 'package:meals/components/favorite-meals/favorite_meals_list.dart';
-import 'package:meals/components/meal-grid/meal_categories_grid.dart';
-import 'package:meals/models/meal.dart';
+import 'package:meals/app/pages/home/components/bottom-bar/bottom_bar.dart';
+import 'package:meals/app/pages/home/components/favorite-meals/favorite_meals_list.dart';
+import 'package:meals/app/pages/home/components/meal-grid/meal_categories_grid.dart';
+import 'components/drawer/drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override

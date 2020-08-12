@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:meals/models/meal.dart';
+import 'package:meals/app/models/meal_model.dart';
 
 class FavoritesModel extends ChangeNotifier {
   List<Meal> _favoriteMeals = [];
