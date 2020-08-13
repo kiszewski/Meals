@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/models/meal_model.dart';
-import 'package:meals/app/utils/favorites_model.dart';
+import 'package:meals/app/models/favorites_model.dart';
 import 'package:provider/provider.dart';
 
 class MealDetailsPage extends StatelessWidget {

@@ -10,4 +10,8 @@ class PagesNavigationViewModel {
       arguments: arguments,
     );
   }
+
+  replaceCurrentPage(BuildContext context, String route) {
+    Navigator.of(context).pushReplacementNamed(route);
+  }
 }

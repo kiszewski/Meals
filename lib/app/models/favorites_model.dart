@@ -4,6 +4,8 @@ import 'package:meals/app/models/meal_model.dart';
 class FavoritesModel extends ChangeNotifier {
   List<MealModel> _favoriteMeals = [];
 
+  List<MealModel> get items => _favoriteMeals;
+
   void _addFavoriteMeal(MealModel meal) => _favoriteMeals.add(meal);
 
   void _removeFavoriteMeal(MealModel meal) => _favoriteMeals.remove(meal);
@@ -15,6 +17,4 @@ class FavoritesModel extends ChangeNotifier {
 
     notifyListeners();
   }
-
-  List<MealModel> get items => _favoriteMeals;
 }

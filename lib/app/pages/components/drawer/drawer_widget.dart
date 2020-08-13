@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meals/app/routes/app_routes.dart';
 import 'drawer_list_item_widget.dart';
 
 class DrawerWidget extends StatelessWidget {
-
   const DrawerWidget();
 
   @override
@@ -25,8 +25,16 @@ class DrawerWidget extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
-                const DrawerListItem(icon: Icons.restaurant, title: 'Refeições'),
-                const DrawerListItem(icon: Icons.settings, title: 'Configurações'),
+                const DrawerListItem(
+                  icon: Icons.restaurant,
+                  title: 'Refeições',
+                  route: AppRoutes.HOME,
+                ),
+                const DrawerListItem(
+                  icon: Icons.settings,
+                  title: 'Configurações',
+                  route: AppRoutes.CONFIGS,
+                ),
               ],
             )
           ],
