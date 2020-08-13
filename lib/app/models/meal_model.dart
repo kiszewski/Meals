@@ -12,7 +12,7 @@ enum Complexity {
   Difficult
 }
 
-class Meal {
+class MealModel {
   final String id;
   final List<String> categories;
   final String title;
@@ -27,7 +27,7 @@ class Meal {
   final bool isVegetarian;
   final bool isLactoseFree;
 
-  const Meal({
+  const MealModel({
     @required this.id,
     @required this.categories,
     @required this.title,

@@ -4,7 +4,7 @@ import 'package:meals/data/dummy_data.dart';
 import 'meal_categories_item.dart';
 
 class MealCategoriesGrid extends StatelessWidget {
-  static const List<Category> categories = DUMMY_CATEGORIES;
+  static const List<CategoryModel> categories = DUMMY_CATEGORIES;
 
   const MealCategoriesGrid();
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Category {
+class CategoryModel {
   final String id;
   final String title;
   final Color color;
 
-  const Category({
+  const CategoryModel({
     this.id,
     this.title,
     this.color,

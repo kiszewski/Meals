@@ -3,52 +3,52 @@ import 'package:meals/app/models/category_model.dart';
 import 'package:meals/app/models/meal_model.dart';
 
 const DUMMY_CATEGORIES = const [
-  Category(
+  CategoryModel(
     id: 'c1',
     title: 'Italiano',
     color: Colors.purple,
   ),
-  Category(
+  CategoryModel(
     id: 'c2',
     title: 'Rápido & Fácil',
     color: Colors.red,
   ),
-  Category(
+  CategoryModel(
     id: 'c3',
     title: 'Hamburgers',
     color: Colors.orange,
   ),
-  Category(
+  CategoryModel(
     id: 'c4',
     title: 'Alemã',
     color: Colors.amber,
   ),
-  Category(
+  CategoryModel(
     id: 'c5',
     title: 'Leve & Saudável',
     color: Colors.indigo,
   ),
-  Category(
+  CategoryModel(
     id: 'c6',
     title: 'Exótica',
     color: Colors.green,
   ),
-  Category(
+  CategoryModel(
     id: 'c7',
     title: 'Café da Manhã',
     color: Colors.lightBlue,
   ),
-  Category(
+  CategoryModel(
     id: 'c8',
     title: 'Asiática',
     color: Colors.lightGreen,
   ),
-  Category(
+  CategoryModel(
     id: 'c9',
     title: 'Francesa',
     color: Colors.pink,
   ),
-  Category(
+  CategoryModel(
     id: 'c10',
     title: 'Verão',
     color: Colors.teal,
@@ -56,7 +56,7 @@ const DUMMY_CATEGORIES = const [
 ];
 
 const DUMMY_MEALS = const [
-  Meal(
+  MealModel(
     id: 'm1',
     categories: ['c1', 'c2'],
     title: 'Spaghetti with Tomato Sauce',
@@ -87,7 +87,7 @@ const DUMMY_MEALS = const [
     isVegetarian: true,
     isLactoseFree: true,
   ),
-  Meal(
+  MealModel(
     id: 'm2',
     categories: ['c2'],
     title: 'Toast Hawaii',
@@ -113,7 +113,7 @@ const DUMMY_MEALS = const [
     isVegetarian: false,
     isLactoseFree: false,
   ),
-  Meal(
+  MealModel(
     id: 'm3',
     categories: ['c2', 'c3'],
     title: 'Classic Hamburger',
@@ -142,7 +142,7 @@ const DUMMY_MEALS = const [
     isVegetarian: false,
     isLactoseFree: true,
   ),
-  Meal(
+  MealModel(
     id: 'm4',
     categories: ['c4'],
     title: 'Wiener Schnitzel',
@@ -175,7 +175,7 @@ const DUMMY_MEALS = const [
     isVegetarian: false,
     isLactoseFree: false,
   ),
-  Meal(
+  MealModel(
     id: 'm5',
     categories: ['c2', 'c5', 'c10'],
     title: 'Salad with Smoked Salmon',
@@ -207,7 +207,7 @@ const DUMMY_MEALS = const [
     isVegetarian: true,
     isLactoseFree: true,
   ),
-  Meal(
+  MealModel(
     id: 'm6',
     categories: ['c6', 'c10'],
     title: 'Delicious Orange Mousse',
@@ -240,7 +240,7 @@ const DUMMY_MEALS = const [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  MealModel(
     id: 'm7',
     categories: ['c7'],
     title: 'Pancakes',
@@ -269,7 +269,7 @@ const DUMMY_MEALS = const [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  MealModel(
     id: 'm8',
     categories: ['c8'],
     title: 'Creamy Indian Chicken Curry',
@@ -300,7 +300,7 @@ const DUMMY_MEALS = const [
     isVegetarian: false,
     isLactoseFree: true,
   ),
-  Meal(
+  MealModel(
     id: 'm9',
     categories: ['c9'],
     title: 'Chocolate Souffle',
@@ -347,7 +347,7 @@ const DUMMY_MEALS = const [
     isVegetarian: true,
     isLactoseFree: false,
   ),
-  Meal(
+  MealModel(
     id: 'm10',
     categories: ['c2', 'c5', 'c10'],
     title: 'Asparagus Salad with Cherry Tomatoes',

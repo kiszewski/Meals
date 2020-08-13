@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/models/meal_model.dart';
 import 'package:meals/app/routes/app_routes.dart';
+import 'package:meals/app/viewmodels/pages_navigation_viewmodel.dart';
 
 class MealItem extends StatelessWidget {
-  final Meal meal;
+  final MealModel meal;
 
   const MealItem({this.meal});
 
-  void _navigateToDetailsMeal(BuildContext context) {
-    Navigator.pushNamed(
-      context,
-      AppRoutes.MEALS_DETAILS,
-      arguments: meal,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    final PagesNavigationViewModel pagesNavigationViewModel =
+        PagesNavigationViewModel();
+
     return LayoutBuilder(builder: (context, constrains) {
       return GestureDetector(
         child: Container(
@@ -102,7 +98,8 @@ class MealItem extends StatelessWidget {
             elevation: 5,
           ),
         ),
-        onTap: () => _navigateToDetailsMeal(context),
+        onTap: () => pagesNavigationViewModel.navigateToPage(
+            context, AppRoutes.MEALS_DETAILS, meal),
       );
     });
   }
