@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/pages/meals/components/meal_item_widget.dart';
-import 'package:meals/app/models/favorites_model.dart';
+import 'package:meals/app/viewmodels/toogle_favorites_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class FavoriteMealsList extends StatelessWidget {
@@ -8,7 +8,7 @@ class FavoriteMealsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final favoriteMeals = Provider.of<FavoritesModel>(context);
+    final favoriteMeals = Provider.of<ToogleFavoritesViewModel>(context);
 
     return SingleChildScrollView(
       child: Column(

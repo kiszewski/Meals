@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals/app/pages/components/drawer/drawer_widget.dart';
-import 'package:meals/app/pages/configs/configs_controller.dart';
+import 'package:meals/app/viewmodels/change_configs_viewmodel.dart';
+import 'package:provider/provider.dart';
 
 class ConfigsPage extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class ConfigsPage extends StatefulWidget {
 class _ConfigsPageState extends State<ConfigsPage> {
   @override
   Widget build(BuildContext context) {
-    final configsController = ConfigsController.instance;
+    final configs = Provider.of<ChangeConfigsViewModel>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -53,8 +54,8 @@ class _ConfigsPageState extends State<ConfigsPage> {
                   ],
                 ),
                 Switch(
-                    value: configsController.hasNoGluten,
-                    onChanged: (value) => configsController.changeConfigsViewModel.changeGluten(value))
+                    value: configs.noGluten,
+                    onChanged: (value) => configs.changeGluten(value))
               ],
             ),
           )
