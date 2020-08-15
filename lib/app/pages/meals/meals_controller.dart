@@ -1,3 +1,4 @@
+import 'package:meals/app/models/configs_model.dart';
 import 'package:meals/app/models/meal_model.dart';
 import 'package:meals/data/dummy_data.dart';
 
@@ -7,9 +8,13 @@ class MealsController {
 
   static const List<MealModel> mealList = DUMMY_MEALS;
 
-  List<MealModel> getMealsByCategory(String category) {
+  List<MealModel> getMealsByCategory(String category, ConfigsModel configs) {
     return mealList
         .where((meal) => meal.categories.any((cat) => cat == category))
+        .where((meal) => configs.noGluten ? meal.isGlutenFree && configs.noGluten : true)
+        .where((meal) => configs.noLactose ? meal.isLactoseFree && configs.noLactose : true)
+        .where((meal) => configs.onlyVegan ? meal.isVegan && configs.onlyVegan : true)
+        .where((meal) => configs.onlyVegetarian ? meal.isVegetarian && configs.onlyVegetarian : true)
         .toList();
   }
 }
