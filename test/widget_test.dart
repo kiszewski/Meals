@@ -5,25 +5,20 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:meals/app/app_widget.dart';
+import 'package:meals/app/models/configs_model.dart';
+import 'package:meals/app/models/meal_model.dart';
+import 'package:meals/app/pages/meals/meals_controller.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(AppWidget());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  test('Get meals by category', () {
+  ConfigsModel configs = ConfigsModel();
+  MealsController mealsController = MealsController.instance;
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  final List<MealModel> saladList = mealsController.getMealsByCategory('c5', configs);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  expect(saladList.length, 2);
+
   });
 }
