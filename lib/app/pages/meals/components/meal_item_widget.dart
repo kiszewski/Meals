@@ -28,8 +28,11 @@ class MealItem extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20)),
-                    child: Image.network(
-                      meal.imageUrl,
+                    child: FadeInImage.assetNetwork(
+                      placeholder: 'assets/loading.gif',
+                      placeholderCacheHeight: 1,
+                      placeholderCacheWidth: 1,
+                      image: meal.imageUrl,
                       height: constrains.maxWidth * 0.5,
                       width: constrains.maxWidth,
                       fit: BoxFit.fitWidth,

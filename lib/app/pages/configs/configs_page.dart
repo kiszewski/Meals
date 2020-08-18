@@ -19,45 +19,47 @@ class _ConfigsPageState extends State<ConfigsPage> {
         centerTitle: true,
       ),
       drawer: const DrawerWidget(),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(15),
-                child: Text(
-                  'Filtros',
-                  style: TextStyle(fontSize: 25),
-                ),
-              )
-            ],
-          ),
-          FilterTileWidget(
-            title: "Sem glúten",
-            description: "Exibir somente refeições livres de glúten.",
-            filterValue: configs.noGluten,
-            changeValue: configs.changeGluten,
-          ),
-          FilterTileWidget(
-            title: "Sem Lactose",
-            description: "Exibir somente refeições livres de lactose.",
-            filterValue: configs.noLactose,
-            changeValue: configs.changeLactose,
-          ),
-          FilterTileWidget(
-            title: "Vegana",
-            description: "Exibir somente refeições veganas.",
-            filterValue: configs.onlyVegan,
-            changeValue: configs.changeVegan,
-          ),
-          FilterTileWidget(
-            title: "Vegetariana",
-            description: "Exibir somente refeições vegetarianas.",
-            filterValue: configs.onlyVegetarian,
-            changeValue: configs.changeVegetarian,
-          ),
-        ],
+      body: SingleChildScrollView(
+              child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Text(
+                    'Filtros',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                )
+              ],
+            ),
+            FilterTileWidget(
+              title: "Sem glúten",
+              description: "Exibir somente refeições livres de glúten.",
+              filterValue: configs.noGluten,
+              changeValue: configs.changeGluten,
+            ),
+            FilterTileWidget(
+              title: "Sem Lactose",
+              description: "Exibir somente refeições livres de lactose.",
+              filterValue: configs.noLactose,
+              changeValue: configs.changeLactose,
+            ),
+            FilterTileWidget(
+              title: "Vegana",
+              description: "Exibir somente refeições veganas.",
+              filterValue: configs.onlyVegan,
+              changeValue: configs.changeVegan,
+            ),
+            FilterTileWidget(
+              title: "Vegetariana",
+              description: "Exibir somente refeições vegetarianas.",
+              filterValue: configs.onlyVegetarian,
+              changeValue: configs.changeVegetarian,
+            ),
+          ],
+        ),
       ),
     );
   }
