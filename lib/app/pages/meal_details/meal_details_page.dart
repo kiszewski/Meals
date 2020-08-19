@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class MealDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final favorites = Provider.of<ToogleFavoritesViewModel>(context);
+    final ToogleFavoritesViewModel favorites = Provider.of<ToogleFavoritesViewModel>(context);
     final MealModel meal = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
