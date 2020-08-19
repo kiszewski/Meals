@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/app/services/shared_local_storage_service.dart';
 import 'package:meals/app/viewmodels/change_configs_viewmodel.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(
-        create: (context) => ToogleFavoritesViewModel(),
+        create: (context) => ToogleFavoritesViewModel(SharedLocalStorageService()),
       ),
       ChangeNotifierProvider(
         create: (context) => ChangeConfigsViewModel(),
