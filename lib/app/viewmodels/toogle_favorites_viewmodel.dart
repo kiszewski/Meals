@@ -12,7 +12,7 @@ class ToogleFavoritesViewModel extends ChangeNotifier {
     _init();
   }
 
-  _init() async => _favoriteMeals = await _storage.get('favoriteMeals') ?? [];
+  _init() async => _favoriteMeals = await _storage.getStringList('favoriteMeals') ?? [];
 
   List<MealModel> get items {
     List<MealModel> items = [];

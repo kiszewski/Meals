@@ -53,12 +53,17 @@ class MockLocalStorageService implements ILocalStorage {
   }
 
   @override
-  Future get(String key) {
+  Future getStringList(String key) {
     return Future.value();
   }
 
   @override
   Future put(String key, value) {
+    return Future.value();
+  }
+
+  @override
+  Future getBool(String key) {
     return Future.value();
   }
 }

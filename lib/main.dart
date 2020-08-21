@@ -13,7 +13,7 @@ void main() {
         create: (context) => ToogleFavoritesViewModel(SharedLocalStorageService()),
       ),
       ChangeNotifierProvider(
-        create: (context) => ChangeConfigsViewModel(),
+        create: (context) => ChangeConfigsViewModel(SharedLocalStorageService()),
       ),
 
     ],
