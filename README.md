@@ -8,7 +8,7 @@ This project is my first small project using Flutter, with that i learned the us
 
 ## Usage
 
-<p align="center" float="left">
+<p align="center">
     <p>
         Home page -> Categories -> Meal recipe
     </p>
@@ -21,7 +21,7 @@ This project is my first small project using Flutter, with that i learned the us
 
 <p align="center">
     <p>
-        The user can filter types of meals and create a favorite meals list
+        The user can filter types of meals and create a favorite meals list.
     </p>
     <p float="left">
         <img src="screenshots/drawer.jpg" width="200">
