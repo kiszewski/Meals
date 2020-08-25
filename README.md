@@ -1,16 +1,27 @@
-# meals
+# Meals
 
-A new Flutter project.
+An application in Flutter of culinary recipes of different flavors.
 
-## Getting Started
+## What i learned
 
-This project is a starting point for a Flutter application.
+This project is my first small project using Flutter, with that i learned the use of routes and how to store data in the smartphone's memory.
 
-A few resources to get you started if this is your first Flutter project:
+## Usage
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<p align="center">
+    <p align="center">
+        Home page -> Categories -> Meal recipe
+    </p>
+  <img src="screenshots/home.jpg" height="400">
+  <img src="screenshots/categories.jpg" height="400">
+  <img src="screenshots/meal.jpg" height="400">
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+    <p align="center">
+        The user can filter types of meals and create a favorite meals list
+    </p>
+  <img src="screenshots/drawer.jpg" height="400">
+  <img src="screenshots/filters.jpg" height="400">
+  <img src="screenshots/favorites.jpg" height="400">
+</p>
