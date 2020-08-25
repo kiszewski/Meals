@@ -12,9 +12,11 @@ This project is my first small project using Flutter, with that i learned the us
     <p align="center">
         Home page -> Categories -> Meal recipe
     </p>
-  <img src="screenshots/home.jpg" width="200">
-  <img src="screenshots/categories.jpg" width="200">
-  <img src="screenshots/meal.jpg" width="200">
+    <p float="left">
+        <img src="screenshots/home.jpg" width="100">
+        <img src="screenshots/categories.jpg" width="100">
+        <img src="screenshots/meal.jpg" width="100">
+    </p>
 </p>
 
 <p align="center" float="left">
