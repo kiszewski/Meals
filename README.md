@@ -8,16 +8,20 @@ This project is my first small project using Flutter, with that i learned the us
 
 ## Usage
 
-<p align="center">
+<p align="center" float="left">
     <p align="center">
         Home page -> Categories -> Meal recipe
     </p>
-  <img src="screenshots/home.jpg" height="400"><img src="screenshots/categories.jpg" height="400"><img src="screenshots/meal.jpg" height="400">
+  <img src="screenshots/home.jpg" width="200">
+  <img src="screenshots/categories.jpg" width="200">
+  <img src="screenshots/meal.jpg" width="200">
 </p>
 
-<p align="center">
+<p align="center" float="left">
     <p align="center">
         The user can filter types of meals and create a favorite meals list
     </p>
-  <img src="screenshots/drawer.jpg" height="400"><img src="screenshots/filters.jpg" height="400"><img src="screenshots/favorites.jpg" height="400">
+  <img src="screenshots/drawer.jpg" width="200">
+  <img src="screenshots/filters.jpg" width="200">
+  <img src="screenshots/favorites.jpg" width="200">
 </p>
