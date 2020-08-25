@@ -15,31 +15,21 @@ class DrawerListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PagesNavigationViewModel pagesNavigationViewModel = PagesNavigationViewModel();
+    final PagesNavigationViewModel pagesNavigationViewModel =
+        PagesNavigationViewModel();
 
     return LayoutBuilder(builder: (context, constraints) {
-      return Container(
-        width: constraints.maxWidth,
-        height: constraints.maxWidth * 0.25,
-        padding: const EdgeInsets.all(20),
-        child: GestureDetector(
-          onTap: () => pagesNavigationViewModel.replaceCurrentPage(context, route),
-          child: Row(
-            children: <Widget>[
-              Icon(
-                icon,
-                size: constraints.maxWidth * 0.1,
-                color: Colors.grey[400],
-              ),
-              SizedBox(
-                width: constraints.maxWidth * 0.05,
-              ),
-              Text(
-                title,
-                style: TextStyle(fontSize: constraints.maxWidth * 0.07),
-              )
-            ],
-          ),
+      return ListTile(
+        onTap: () =>
+            pagesNavigationViewModel.replaceCurrentPage(context, route),
+        leading: Icon(
+          icon,
+          size: constraints.maxWidth * 0.1,
+          color: Colors.grey[400],
+        ),
+        title: Text(
+          title,
+          style: TextStyle(fontSize: constraints.maxWidth * 0.07),
         ),
       );
     });
