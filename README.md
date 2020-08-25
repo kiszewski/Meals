@@ -9,7 +9,7 @@ This project is my first small project using Flutter, with that i learned the us
 ## Usage
 
 <p align="center" float="left">
-    <p align="center">
+    <p>
         Home page -> Categories -> Meal recipe
     </p>
     <p float="left">
@@ -20,7 +20,7 @@ This project is my first small project using Flutter, with that i learned the us
 </p>
 
 <p align="center">
-    <p align="center">
+    <p>
         The user can filter types of meals and create a favorite meals list
     </p>
     <p float="left">
