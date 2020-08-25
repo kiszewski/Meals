@@ -13,17 +13,19 @@ This project is my first small project using Flutter, with that i learned the us
         Home page -> Categories -> Meal recipe
     </p>
     <p float="left">
-        <img src="screenshots/home.jpg" width="100">
-        <img src="screenshots/categories.jpg" width="100">
-        <img src="screenshots/meal.jpg" width="100">
+        <img src="screenshots/home.jpg" width="200">
+        <img src="screenshots/categories.jpg" width="200">
+        <img src="screenshots/meal.jpg" width="200">
     </p>
 </p>
 
-<p align="center" float="left">
+<p align="center">
     <p align="center">
         The user can filter types of meals and create a favorite meals list
     </p>
-  <img src="screenshots/drawer.jpg" width="200">
-  <img src="screenshots/filters.jpg" width="200">
-  <img src="screenshots/favorites.jpg" width="200">
+    <p float="left">
+        <img src="screenshots/drawer.jpg" width="200">
+        <img src="screenshots/filters.jpg" width="200">
+        <img src="screenshots/favorites.jpg" width="200">
+    </p>
 </p>
